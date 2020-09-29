@@ -1,0 +1,1 @@
+Denna texten skall hämtas och skrivas ut på localhost:3000 när man är guest! - information.txt
