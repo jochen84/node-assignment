@@ -23,7 +23,8 @@ let server = http.createServer((request, response) => {
     }
     else if(urlData.pathname.length > 1){
       let number = urlData.pathname.replace("/", "");
-      let isPersonNr = (personnummer.validate(number) ? response.write(number + " is valid") : response.write(number + " is NOT valid"))
+      let isPersonNr = (personnummer.validate(number) ? number+' is valid' : number+' is NOT valid')
+      response.write(isPersonNr);
     }else{
       response.write('<h2>Hello guest</h2>');
       response.write('<h3>' + txtContent + '</h3>');
